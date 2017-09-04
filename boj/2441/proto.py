@@ -16,8 +16,10 @@ def input_num():
 
 
 def main(s):
-    s.push(input_num())
-    s.duplicate()
+    while not s.duplicate_catch():
+        s.push(input_num())
+        s.duplicate()
+        s.add()
     s.send_to(stack1)
     while s.duplicate() and s.pop_is_nonzero():
         s.activate(stack1)
@@ -43,17 +45,13 @@ def main(s):
 
             s.activate(stack1)
 
-            s.push_strict(0)
-            s.push_strict(0)
-            s.compare()
+            s.push_strict(2)
             s.sub()
 
         s.pop()
 
         s.activate(stack0)
-        s.push_strict(0)
-        s.push_strict(0)
-        s.compare()
+        s.push_strict(2)
         s.sub()
 
         s.push_strict(5)
