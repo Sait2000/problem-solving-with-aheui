@@ -1,0 +1,95 @@
+L0:     PUSHCHAR   ; L0    L0    L0    L0    L0    L0    L0    L0     밯 / [  0,  0] RIGHT1
+        DUP        ; L1    L1    L1    L1    L1    L1    L1    L1     빠 / [  0,  1] RIGHT1
+        PUSH 48    ; L2    L2    L2    L2    L2    L2    L2    L2     밣 / [  0,  2] RIGHT1 /  L3   밦 / [  0,  3] RIGHT1 /  L4   따 / [  0,  4] RIGHT1
+        CMP        ; L3    L3    L3    L3    L3    L3    L3    L3   /  L6   쟈 / [  0,  5] RIGHT2
+        BRZ  L7    ; L4    L4    L4    L4    L4    L4    L4    L4   /  L8   차 / [  0,  7] RIGHT1
+        POPCHAR    ; L5    L5    L5    L5    L5    L5    L5    L5   /  L10  맣 / [  0,  8] RIGHT1
+        JMP  L0    ; L6    L6    L6    L6    L6    L6    L6    L6    아 / [  0,  9] RIGHT1 / 아 / [  0, 10] RIGHT1
+L7:     DUP        ; L7    L7    L7    L7    L7    L7    L7    L7   /  L13  뿌 / [  0,  6] DOWN 1
+        PUSH 42    ; L8    L8    L8    L8    L8    L8    L8    L8    벍 / [  1,  6] LEFT 1 /  L9    L9    L9    L15  벖 / [  1,  5] LEFT 1 /  L10   L10   L11   L17  떠 / [  1,  4] LEFT 1
+        CMP        ; L9    L9    L9    L9    L9    L9    L9    L9    져 / [  1,  3] LEFT 2
+        BRZ  L44   ; L10   L10   L10   L10   L10   L10   L10   L10   차 / [  1,  1] RIGHT1
+        DUP        ; L11   L11   L11   L11   L11   L11   L11   L11   뿌 / [  1,  2] DOWN 1
+L12:    PUSH 40    ; L12   L12   L12   L12   L12   L12   L12   L12   붏 / [  2,  2] DOWN 1 /  L15   L17   L24  불 / [  3,  2] DOWN 1 /  L16   L18   L25 /  L17   L19   L26  따 / [  4,  2] RIGHT1
+        SUB        ; L13   L13   L13   L13   L13   L13   L13   L13   타 / [  4,  3] RIGHT1
+        DUP        ; L14   L14   L14   L14   L14   L14   L14   L14   빠 / [  4,  4] RIGHT1
+        MUL        ; L15   L15   L15   L15   L15   L15   L15   L15   따 / [  4,  5] RIGHT1
+        PUSH 2     ; L16   L16   L16   L16   L16   L16   L16   L16   반 / [  4,  6] RIGHT1
+        MUL        ; L17   L17   L17   L17   L17   L17   L17   L17  /  L20   L24   L26   L33  따 / [  4,  7] RIGHT1
+        PUSH 3     ; L18   L18   L18   L18   L18   L18   L18   L18   받 / [  4,  8] RIGHT1
+        DIV        ; L19   L19   L19   L19   L19   L19   L19   L19   나 / [  4,  9] RIGHT1
+        PUSH 5     ; L20   L20   L20   L20   L20   L20   L20   L20   발 / [  4, 10] RIGHT1
+        MOD        ; L21   L21   L21   L21   L21   L21   L21   L21   료 / [  4, 11] UP   2
+        SEL  1     ; L22   L22   L22   L22   L22   L22   L22   L22   속 / [  2, 11] UP   1
+        BRPOP1 L55  ; L23   L23   L23   L23   L23   L23   L23   L23
+        DUP        ; L24   L24   L24   L24   L24   L24   L24   L24   쀼 / [  1, 11] DOWN 2
+        PUSH 40    ; L25   L25   L25   L25   L25   L25   L25   L25   벓 / [  3, 11] LEFT 1 /  L26   L26   L26   L29   L33   L35   L42  볼 / [  3, 10] UP   1 /  L27   L27   L27   L30   L34   L37   L44  또 / [  2, 10] UP   1
+        SUB        ; L26   L26   L26   L26   L26   L26   L26   L26  /  L29   L29   L29   L32   L36   L39   L46  터 / [  1, 10] LEFT 1
+        DUP        ; L27   L27   L27   L27   L27   L27   L27   L27   뻐 / [  1,  9] LEFT 1
+        MUL        ; L28   L28   L28   L28   L28   L28   L28   L28   떠 / [  1,  8] LEFT 1
+        PUSH 2     ; L29   L29   L29   L29   L29   L29   L29   L29   분 / [  1,  7] DOWN 1
+        MUL        ; L30   L30   L30   L30   L30   L30   L30   L30   따 / [  2,  7] RIGHT1
+        PUSH 3     ; L31   L31   L31   L31   L31   L31   L31   L31   받 / [  2,  8] RIGHT1
+        DIV        ; L32   L32   L32   L32   L32   L32   L32   L32   누 / [  2,  9] DOWN 1
+        PUSH 5     ; L33   L33   L33   L33   L33   L33   L33   L33   벌 / [  3,  9] LEFT 1
+        MOD        ; L34   L34   L34   L34   L34   L34   L34   L34   러 / [  3,  8] LEFT 1
+        SEL  0     ; L35   L35   L35   L35   L35   L35   L35   L35   서 / [  3,  7] LEFT 1
+        MOV  1     ; L36   L36   L36   L36   L36   L36   L36   L36   쏙 / [  3,  6] UP   1
+        SEL  1     ; L37   L37   L37   L37   L37   L37   L37   L37   석 / [  2,  6] LEFT 1
+        CMP        ; L38   L38   L38   L38   L38   L38   L38   L38   주 / [  2,  4] DOWN 1
+        BRZ  L63   ; L39   L39   L39   L39   L39   L39   L39   L39   처 / [  3,  4] LEFT 1
+        POPCHAR    ; L40   L40   L40   L40   L40   L40   L40   L41   뫃 / [  3,  3] UP   1
+        SEL  0     ; L41   L41   L41   L41   L41   L41   L41   L42   셔 / [  2,  3] LEFT 2
+        DUP        ; L42   L42   L42   L43   L43   L43   L43   L44   빠 / [  2,  1] RIGHT1
+        JMP  L12   ; L43   L43   L43   L44   L44   L44   L44   L45
+L44:    DUP        ; L44   L44   L44   L45   L45   L45   L45   L46   희 / [  7,  6] UP   1 /  L69 /  L55   L59   L62   L70  뾰 / [  1,  0] UP   2
+        PUSH 11    ; L45   L45   L45   L46   L46   L46   L46   L47   뵬 / [  6,  0] UP   2 / 요 / [  8,  0] UP   2 /  L61   L64   L72  밦 / [  4,  0] RIGHT1 /  L62   L65   L73 /  L63   L66   L74  듀 / [  4,  1] DOWN 2
+        CMP        ; L46   L46   L46   L47   L47   L47   L47   L48 /  L49   쟈 / [  6,  1] RIGHT2
+        BRZ  L77   ; L47   L47   L47   L48   L48   L48   L48   L50   차 / [  6,  3] RIGHT1
+        DUP        ; L48   L48   L48   L49   L49   L49   L49   L51 /  L52   뺘 / [  6,  4] RIGHT2
+        PUSH 40    ; L49   L49   L49   L50   L50   L50   L50   L53   뱛 / [  6,  6] RIGHT2 / 뱔 / [  6,  8] RIGHT2 / 땨 / [  6, 10] RIGHT2
+L50:    BRPOP2 L55  ; L50   L50   L50   L51   L51   L51   L51   L54
+        SWAP       ; L51   L51   L51   L52   L52   L52   L52   L55   파 / [  6, 12] RIGHT1
+        CMP        ; L52   L52   L52   L53   L53   L53   L53   L56   자 / [  6, 13] RIGHT1
+        BRZ  L65   ; L53   L53   L53   L54   L54   L54   L54   L57   쳐 / [  6, 14] LEFT 2
+        JMP  L50   ; L54   L54   L54   L55   L55   L55   L55   L58
+L55:    SEL  0     ; L55   L55   L55   L56   L56   L56   L56   L59   셔 / [  6, 11] LEFT 2
+        DUP        ; L56   L56   L56   L57   L57   L57   L57   L60   뼈 / [  6,  9] LEFT 2
+        PUSH 5     ; L57   L57   L57   L58   L58   L58   L58   L61   볼 / [  6,  7] UP   1
+L58:    BRPOP2 L61  ; L58   L58   L58   L59   L59   L59   L59   L62
+        CMP        ; L59   L59   L59   L60   L60   L60   L60   L63   저 / [  5,  7] LEFT 1
+        BRZ  L81   ; L60   L60   L60   L61   L61   L61   L61   L64   챠 / [  5,  6] RIGHT2
+L61:    MOV  1     ; L61   L61   L61   L62   L62   L62   L62   L65   쓕 / [  5, 10] DOWN 2
+        JMP  L0    ; L62   L62   L62   L63   L63   L63   L63   L66
+L63:    SEL  0     ; L63   L63   L63   L64   L64   L64   L64   L67   슈 / [  3,  5] DOWN 2
+        JMP  L58   ; L64   L64   L64   L65   L65   L65   L65   L68   야 / [  5,  5] RIGHT2
+L65:    DUP        ; L65   L65   L67   L68   L68   L68   L68   L72  뻐 / [  6, 16] LEFT 1
+        SEL  1     ; L66   L66   L68   L69   L69   L69   L69   L73  속 / [  6, 15] UP   1
+        DUP        ; L67   L67   L69   L70   L70   L70   L70   L74  뻐 / [  5, 15] LEFT 1
+        MOV  0     ; L68   L68   L70   L71   L71   L71   L71   L75  써 / [  5, 14] LEFT 1
+        SEL  0     ; L69   L69   L71   L72   L72   L72   L72   L76  서 / [  5, 13] LEFT 1
+        CMP        ; L70   L70   L72   L73   L73   L73   L73   L77  조 / [  5, 12] UP   1
+        BRZ  L83   ; L71   L71   L73   L74   L74   L74   L74   L78  야 / [  4, 12] RIGHT2 / 처 / [  4, 14] LEFT 1
+        POP        ; L72   L72   L74   L75   L75   L75   L75   L79  모 / [  4, 13] UP   1
+        SEL  1     ; L73   L73   L75   L76   L76   L76   L76   L80  석 / [  3, 13] LEFT 1
+        POP        ; L74   L74   L76   L77   L77   L77   L77   L81  먀 / [  3, 12] RIGHT2
+        SEL  0     ; L75   L75   L65   L66   L66   L66   L66   L69   요 / [  2,  0] UP   2 / 소 / [  3,  0] UP   1
+        JMP  L0    ; L76   L76   L66   L67   L67   L67   L67   L70
+L77:    SEL  1     ; L77   L77   L78   L79   L79   L79   L79   L83  속 / [  6,  2] UP   1
+        BRPOP1 L87  ; L78   L78   L79   L80   L80   L80   L80   L84
+        POPCHAR    ; L79   L79   L80   L81   L81   L81   L81   L85  맣 / [  5,  2] RIGHT1
+        JMP  L77   ; L80   L80   L81   L82   L82   L82   L83   L87
+L81:    POP        ; L81   L81   L82   L83   L83   L84   L85   L89  마 / [  5,  4] RIGHT1
+        JMP  L58   ; L82   L82   L83   L84   L84   L85   L86   L90
+L83:    SEL  1     ; L83   L85   L86   L87   L87   L88   L89   L93  삭 / [  4, 15] RIGHT1
+        POPCHAR    ; L84   L86   L87   L88   L89   L90   L91   L95  뭏 / [  4, 16] DOWN 1
+        SEL  0     ; L85   L83   L84   L85   L85   L86   L87   L91  수 / [  5, 16] DOWN 1
+        JMP  L65   ; L86   L84   L85   L86   L86   L87   L88   L92
+L87:    SEL  0     ; L87   L88   L89   L90   L91   L92   L93   L97  슈 / [  5,  1] DOWN 2
+        DUP        ; L88   L89   L90   L91   L92   L93   L94   L98  뺘 / [  7,  1] RIGHT2
+        PUSH 9     ; L89   L90   L91   L92   L93   L94   L95   L99  뱗 / [  7,  3] RIGHT2
+        CMP        ; L90   L91   L92   L93   L94   L95   L96   L100 저 / [  7,  5] LEFT 1
+        BRZ  L94   ; L91   L92   L93   L94   L95   L96   L97   L101 쳐 / [  7,  4] LEFT 2
+        POPCHAR    ; L92   L93   L94   L95   L96   L97   L98   L102 몋 / [  7,  2] LEFT 2
+        JMP  L0    ; L93   L94   L95   L96   L97   L98   L99   L103 유 / [  7,  0] DOWN 2
+L94:    HALT       ; L94   L95   L96   L97   L98   L99   L100  L104 희 / [  7,  6] LEFT 2 /  L111  L114  L115  L121  L128  L131  L139 희 / [  7,  6] RIGHT1 / 희 / [  7,  6] RIGHT2
